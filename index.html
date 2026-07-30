@@ -3,41 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fato Oculto</title>
+<meta name="description" content="Fato Oculto — vídeos curtos com curiosidades reais sobre o oceano e a ciência.">
+<title>Fato Oculto — curiosidades reais sobre o oceano e a ciência</title>
 <style>
-  :root { color-scheme: light dark; }
-  body { max-width: 720px; margin: 60px auto; padding: 0 20px; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-  h1 { font-size: 2rem; margin-bottom: .2rem; }
-  .sub { opacity: .75; margin-top: 0; }
-  ul { line-height: 1.9; }
-  a { color: #2b7de9; }
-  footer { margin-top: 3rem; font-size: .9rem; opacity: .7; }
-  .links a { display: inline-block; margin-right: 1.2rem; }
+  :root { color-scheme: light dark; --fg: #1a1a1a; --bg: #ffffff; --muted: #5a5a5a; --accent: #0e6ba8; --card: #f4f6f8; --border: #e2e6ea; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #eaeaea; --bg: #0f1115; --muted: #a3a9b3; --accent: #6fb8ea; --card: #171a20; --border: #262b33; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--fg); background: var(--bg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 920px; margin: 0 auto; padding: 0 20px 60px; }
+  header.hero { padding: 64px 20px 40px; text-align: center; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 .3rem; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); font-size: 1.15rem; margin: 0 auto; max-width: 560px; }
+  h2 { font-size: 1.4rem; margin: 3rem 0 1rem; }
+  p { color: var(--fg); }
+  .lead { color: var(--muted); max-width: 680px; }
+  .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .video-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .video-card .frame { position: relative; padding-top: 177.7%; background: #000; }
+  .video-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .video-card .label { padding: 10px 12px; font-size: .85rem; color: var(--muted); }
+  .topics { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+  .topics li { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: .92rem; }
+  .channels { display: flex; flex-wrap: wrap; gap: 12px; margin-top: .5rem; }
+  .channels a { display: inline-block; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--fg); text-decoration: none; font-weight: 600; }
+  .channels a:hover { border-color: var(--accent); color: var(--accent); }
+  a { color: var(--accent); }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: .9rem; color: var(--muted); }
+  footer .links a { margin-right: 1.2rem; }
 </style>
 </head>
 <body>
-<h1>Fato Oculto</h1>
-<p class="sub">Vídeos curtos de curiosidades reais sobre o oceano e a ciência.</p>
+<header class="hero">
+  <h1>Fato Oculto</h1>
+  <p class="tagline">Vídeos curtos com curiosidades reais sobre o oceano e a ciência — mistérios, descobertas e fenômenos que a maioria nunca ouviu falar.</p>
+</header>
 
-<p><strong>Fato Oculto</strong> é um projeto pessoal que cria e publica vídeos
-curtos verticais (Shorts/Reels) sobre mistérios e descobertas do fundo do mar,
-usando pesquisa própria, narração e imagens. A publicação nas redes sociais é
-feita pelas <em>APIs oficiais</em> de cada plataforma, apenas nas contas do
-próprio criador.</p>
+<main>
+  <section>
+    <h2>Assista</h2>
+    <p class="lead">Alguns dos vídeos já publicados no canal:</p>
+    <div class="videos">
+      <div class="video-card">
+        <div class="frame"><iframe src="https://www.youtube.com/embed/rN4bYiGIJFo" title="Fato Oculto — vídeo" loading="lazy" allowfullscreen></iframe></div>
+        <div class="label">A verdade sobre o peixe-gota</div>
+      </div>
+      <div class="video-card">
+        <div class="frame"><iframe src="https://www.youtube.com/embed/zkjPM0IkTJ8" title="Fato Oculto — vídeo" loading="lazy" allowfullscreen></iframe></div>
+        <div class="label">Lagos de salmoura submarinos</div>
+      </div>
+      <div class="video-card">
+        <div class="frame"><iframe src="https://www.youtube.com/embed/QTQ7WpvPJKY" title="Fato Oculto — vídeo" loading="lazy" allowfullscreen></iframe></div>
+        <div class="label">A cachoeira submarina que engana os olhos</div>
+      </div>
+      <div class="video-card">
+        <div class="frame"><iframe src="https://www.youtube.com/embed/QLSURxI2Sqs" title="Fato Oculto — vídeo" loading="lazy" allowfullscreen></iframe></div>
+        <div class="label">O vulcão de enxofre no fundo do oceano</div>
+      </div>
+    </div>
+    <p class="channels">
+      <a href="https://www.youtube.com/@FatoOcultoOficiall" target="_blank" rel="noopener">▶ YouTube</a>
+      <a href="https://www.tiktok.com/@fatooculto_oficial" target="_blank" rel="noopener">TikTok</a>
+    </p>
+  </section>
 
-<h2>O que o app faz</h2>
-<ul>
-  <li>Escolhe um tema e escreve o roteiro.</li>
-  <li>Gera narração e imagens.</li>
-  <li>Monta o vídeo final (vertical, com legendas).</li>
-  <li>Publica nas contas do criador via API oficial.</li>
-</ul>
+  <section>
+    <h2>Sobre</h2>
+    <p class="lead">
+      O <strong>Fato Oculto</strong> é um canal de curiosidades reais sobre o oceano
+      e a ciência: fenômenos naturais raros, descobertas científicas e mistérios do
+      fundo do mar, contados em vídeos curtos e verticais, com fontes e pesquisa
+      próprias por trás de cada roteiro. Novos vídeos saem diariamente.
+    </p>
+  </section>
 
-<p class="links">
-  <a href="terms.html">Termos de Serviço</a>
-  <a href="privacy.html">Política de Privacidade</a>
-</p>
+  <section>
+    <h2>Temas que já cobrimos</h2>
+    <ul class="topics">
+      <li>Geologia e vulcanismo submarino</li>
+      <li>Criaturas de profundidade</li>
+      <li>Fenômenos ópticos e acústicos do oceano</li>
+      <li>Expedições e descobertas da NOAA</li>
+      <li>Biologia extrema em condições adversas</li>
+      <li>Mistérios ainda sem explicação completa</li>
+    </ul>
+  </section>
 
-<footer>Contato: <a href="mailto:kelvinmelim@gmail.com">kelvinmelim@gmail.com</a></footer>
+  <footer>
+    <p class="links">
+      <a href="terms.html">Termos de Serviço</a>
+      <a href="privacy.html">Política de Privacidade</a>
+    </p>
+    <p>Contato: <a href="mailto:kelvinmelim@gmail.com">kelvinmelim@gmail.com</a></p>
+    <p>&copy; Fato Oculto</p>
+  </footer>
+</main>
 </body>
 </html>
