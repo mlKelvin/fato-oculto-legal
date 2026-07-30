@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Fato Oculto — vídeos curtos com curiosidades reais sobre o oceano e a ciência.">
+<meta name="description" content="Fato Oculto — vídeos curtos com curiosidades reais sobre o oceano e a ciência, desde o fim de 2025.">
 <title>Fato Oculto — curiosidades reais sobre o oceano e a ciência</title>
 <style>
   :root { color-scheme: light dark; --fg: #1a1a1a; --bg: #ffffff; --muted: #5a5a5a; --accent: #0e6ba8; --card: #f4f6f8; --border: #e2e6ea; }
@@ -12,23 +12,41 @@
   }
   * { box-sizing: border-box; }
   body { margin: 0; color: var(--fg); background: var(--bg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width: 920px; margin: 0 auto; padding: 0 20px 60px; }
-  header.hero { padding: 64px 20px 40px; text-align: center; }
-  h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 .3rem; letter-spacing: -.02em; }
-  .tagline { color: var(--muted); font-size: 1.15rem; margin: 0 auto; max-width: 560px; }
-  h2 { font-size: 1.4rem; margin: 3rem 0 1rem; }
+  main { max-width: 960px; margin: 0 auto; padding: 0 20px 60px; }
+  header.hero { padding: 72px 20px 44px; text-align: center; }
+  h1 { font-size: clamp(1.9rem, 4.2vw, 2.8rem); margin: 0 0 .35rem; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); font-size: 1.2rem; margin: 0 auto; max-width: 600px; }
+  h2 { font-size: 1.5rem; margin: 3.5rem 0 1rem; }
+  h3 { font-size: 1.05rem; margin: 0 0 .3rem; }
   p { color: var(--fg); }
-  .lead { color: var(--muted); max-width: 680px; }
+  .lead { color: var(--muted); max-width: 700px; }
+  section > p { max-width: 700px; }
+
+  .story blockquote { margin: 1.6rem 0; padding: .2rem 0 .2rem 1.2rem; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; max-width: 640px; }
+
+  .timeline { list-style: none; padding: 0; margin: 2rem 0 0; border-left: 2px solid var(--border); }
+  .timeline li { position: relative; padding: 0 0 1.8rem 26px; }
+  .timeline li::before { content: ""; position: absolute; left: -7px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+  .timeline .when { color: var(--accent); font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+
   .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
   .video-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
   .video-card .frame { position: relative; padding-top: 177.7%; background: #000; }
   .video-card iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .video-card .label { padding: 10px 12px; font-size: .85rem; color: var(--muted); }
-  .topics { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 1.5rem; }
+  .steps li { list-style: none; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .steps .n { display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center; border-radius: 50%; background: var(--accent); color: #fff; font-size: .85rem; font-weight: 700; margin-bottom: .6rem; }
+  .steps p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+  .topics { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; margin-top: 1.5rem; }
   .topics li { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: .92rem; }
-  .channels { display: flex; flex-wrap: wrap; gap: 12px; margin-top: .5rem; }
+
+  .channels { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1rem; }
   .channels a { display: inline-block; padding: 10px 18px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); color: var(--fg); text-decoration: none; font-weight: 600; }
   .channels a:hover { border-color: var(--accent); color: var(--accent); }
+
   a { color: var(--accent); }
   footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: .9rem; color: var(--muted); }
   footer .links a { margin-right: 1.2rem; }
@@ -41,6 +59,30 @@
 </header>
 
 <main>
+  <section class="story">
+    <h2>Nossa história</h2>
+    <p class="lead">
+      O <strong>Fato Oculto</strong> nasceu no fim de 2025, de uma pergunta simples:
+      por que tanta coisa fascinante sobre o oceano continua trancada em artigos
+      científicos e relatórios de expedição que quase ninguém lê? Passamos semanas
+      garimpando descobertas reais — geologia submarina, criaturas de profundidade,
+      fenômenos que a ciência ainda está tentando explicar — e percebemos que faltava
+      um jeito rápido e honesto de contar essas histórias.
+    </p>
+    <blockquote>"Curiosidade de verdade não precisa de exagero — só precisa ser bem contada."</blockquote>
+    <p class="lead">
+      Foi esse princípio que guiou o formato: vídeos curtos, verticais, direto ao
+      ponto, sempre com pesquisa por trás de cada roteiro. Nada de clickbait vazio —
+      só fatos que resistem a uma segunda checada.
+    </p>
+
+    <ul class="timeline">
+      <li><div class="when">Final de 2025</div><h3>A ideia</h3><p class="lead">Primeiras pesquisas e testes de formato, buscando o jeito certo de traduzir descobertas científicas reais em vídeos curtos sem perder a precisão.</p></li>
+      <li><div class="when">Início de 2026</div><h3>Os primeiros vídeos</h3><p class="lead">Publicação dos primeiros episódios explorando geologia submarina e fenômenos oceânicos pouco conhecidos.</p></li>
+      <li><div class="when">Hoje</div><h3>Ritmo diário</h3><p class="lead">O Fato Oculto publica novos vídeos todos os dias, ampliando o catálogo de temas e expandindo para novas plataformas.</p></li>
+    </ul>
+  </section>
+
   <section>
     <h2>Assista</h2>
     <p class="lead">Alguns dos vídeos já publicados no canal:</p>
@@ -69,13 +111,14 @@
   </section>
 
   <section>
-    <h2>Sobre</h2>
-    <p class="lead">
-      O <strong>Fato Oculto</strong> é um canal de curiosidades reais sobre o oceano
-      e a ciência: fenômenos naturais raros, descobertas científicas e mistérios do
-      fundo do mar, contados em vídeos curtos e verticais, com fontes e pesquisa
-      próprias por trás de cada roteiro. Novos vídeos saem diariamente.
-    </p>
+    <h2>Como cada vídeo é feito</h2>
+    <p class="lead">Todo episódio passa pelo mesmo processo, do tema à publicação:</p>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Pesquisa</h3><p>Escolha de um tema real, checado em fontes como relatórios de expedição, artigos científicos e institutos como a NOAA.</p></li>
+      <li><span class="n">2</span><h3>Roteiro</h3><p>Redação de um roteiro curto e direto, pensado pro formato vertical de 30 a 70 segundos.</p></li>
+      <li><span class="n">3</span><h3>Narração e imagens</h3><p>Narração e imagens geradas pra ilustrar a história sem sensacionalismo.</p></li>
+      <li><span class="n">4</span><h3>Publicação</h3><p>O vídeo final vai ao ar nas contas oficiais do canal, pelas APIs de cada plataforma.</p></li>
+    </ol>
   </section>
 
   <section>
@@ -90,13 +133,23 @@
     </ul>
   </section>
 
+  <section>
+    <h2>Quem está por trás</h2>
+    <p class="lead">
+      O Fato Oculto é escrito, produzido e curado por um único criador de conteúdo,
+      apaixonado por ciência do oceano. Cada tema é escolhido e verificado antes de
+      virar roteiro — a ideia é pequena na escala, mas séria no compromisso com a
+      precisão.
+    </p>
+  </section>
+
   <footer>
     <p class="links">
       <a href="terms.html">Termos de Serviço</a>
       <a href="privacy.html">Política de Privacidade</a>
     </p>
     <p>Contato: <a href="mailto:kelvinmelim@gmail.com">kelvinmelim@gmail.com</a></p>
-    <p>&copy; Fato Oculto</p>
+    <p>&copy; Fato Oculto — desde 2025</p>
   </footer>
 </main>
 </body>
